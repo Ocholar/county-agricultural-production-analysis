@@ -1,74 +1,74 @@
-Agricultural Production Analysis for County-Level Planning
+# Agricultural Production Analysis for County-Level Planning
 
-A comprehensive MEL (Monitoring, Evaluation, and Learning) and Data Analytics project focused on transforming raw agricultural and demographic data into strategic insights for improving agricultural sustainability and food security at the county level.
+A comprehensive MEL (Monitoring, Evaluation, and Learning) and Data Analytics portfolio project focused on transforming raw agricultural and demographic data into strategic insights for improving agricultural sustainability and food security at the county level.
 
-📋 Project Overview
+## 📋 Project Overview
 
 This project demonstrates advanced data cleaning, descriptive analysis, strategic data restructuring, and the application of MEL principles in a public sector/development program context. The analysis focuses on agricultural productivity and county-level planning using real agricultural and demographic data.
 
-🎯 Objectives
+## 🎯 Objectives
 
-• Part 1: Ensure data quality through rigorous cleaning and extract foundational insights on agricultural engagement across counties
+- **Part 1**: Ensure data quality through rigorous cleaning and extract foundational insights on agricultural engagement across counties
 
-• Part 2: Structure data to define strategic priorities and develop key performance indicators (KPIs) for agricultural programs
+- **Part 2**: Structure data to define strategic priorities and develop key performance indicators (KPIs) for agricultural programs
 
-📊 Key Findings
+## 📊 Key Findings
 
-Descriptive Indicators
+### Descriptive Indicators
 
-• Total Farming Households: 6,354,211 households engaged in agricultural activities
+- **Total Farming Households**: 6,354,211 households engaged in agricultural activities
 
-• Average Household Size: 4.51 persons per household
+- **Average Household Size**: 4.51 persons per household
 
-• Agricultural Specialization Index: 60.7% average engagement rate across counties
+- **Agricultural Specialization Index**: 60.7% average engagement rate across counties
 
-Primary Agricultural Sector Classification
+### Primary Agricultural Sector Classification
 
-• 28 counties: Mixed Agriculture (diversified agricultural economy)
+- **28 counties**: Mixed Agriculture (diversified agricultural economy)
 
-• 10 counties: Crop-Livestock Mixed (strong integration between sectors)
+- **10 counties**: Crop-Livestock Mixed (strong integration between sectors)
 
-• 9 counties: Livestock Dominant
+- **9 counties**: Livestock Dominant
 
-Policy-Relevant Metrics
+### Policy-Relevant Metrics
 
-Metric 1: Crop Yield Potential Intensity
+#### Metric 1: Crop Yield Potential Intensity
 
 Measures the number of households engaged in crop production per square kilometer of county area.
 
-Top 5 Counties:
+**Top 5 Counties:**
 
 1. Vihiga: 192.48 households/sq km
 
-2. Kisii: 156.76 households/sq km
+1. Kisii: 156.76 households/sq km
 
-3. Nyamira: 114.63 households/sq km
+1. Nyamira: 114.63 households/sq km
 
-4. Kakamega: 106.60 households/sq km
+1. Kakamega: 106.60 households/sq km
 
-5. Bungoma: 89.28 households/sq km
+1. Bungoma: 89.28 households/sq km
 
-Metric 2: Agricultural Engagement Rate
+#### Metric 2: Agricultural Engagement Rate
 
 Measures the percentage of total households engaged in farming activities.
 
-Correlation with Population Density: -0.589 (p < 0.0001)
+**Correlation with Population Density**: -0.589 (p < 0.0001)
 
-Top 5 Counties:
+**Top 5 Counties:**
 
 1. Kitui: 81.9%
 
-2. Bomet: 81.3%
+1. Bomet: 81.3%
 
-3. Vihiga: 79.3%
+1. Vihiga: 79.3%
 
-4. Makueni: 79.1%
+1. Makueni: 79.1%
 
-5. Nyandarua: 78.4%
+1. Nyandarua: 78.4%
 
-🗂️ Repository Structure
+## 🗂️ Repository Structure
 
-Plain Text
+```
 agricultural_analysis/
 ├── README.md                           # Project documentation
 ├── analysis.py                         # Main analysis script
@@ -91,158 +91,151 @@ agricultural_analysis/
 ├── viz3_specialization_index.png       # Visualization: Specialization index
 ├── viz4_primary_sector_distribution.png # Visualization: Sector distribution
 └── viz5_engagement_vs_density.png      # Visualization: Engagement vs density
+```
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
-• Python 3.11: Core programming language
+- **Python 3.11**: Core programming language
 
-• pandas: Data manipulation and cleaning
+- **pandas**: Data manipulation and cleaning
 
-• numpy: Numerical operations
+- **numpy**: Numerical operations
 
-• matplotlib: Data visualization
+- **matplotlib**: Data visualization
 
-• seaborn: Statistical data visualization
+- **seaborn**: Statistical data visualization
 
-• scipy: Statistical analysis and correlation
+- **scipy**: Statistical analysis and correlation
 
-📈 Data Quality Issues Identified
+## 📈 Data Quality Issues Identified
 
-1. Inconsistent column naming: Mixed case, typos (e.g., 'TOTAL HOUSHOLDS'), and spacing issues
+1. **Inconsistent column naming**: Mixed case, typos (e.g., 'TOTAL HOUSHOLDS'), and spacing issues
 
-2. Missing values: Critical demographic columns had missing data
+1. **Missing values**: Critical demographic columns had missing data
 
-3. Non-county entries: 12 forest/park entries mixed with county data
+1. **Non-county entries**: 12 forest/park entries mixed with county data
 
-4. Data type inconsistencies: Numeric columns containing non-numeric values
+1. **Data type inconsistencies**: Numeric columns containing non-numeric values
 
-5. Potential outliers: Data validation issues requiring verification
+1. **Potential outliers**: Data validation issues requiring verification
 
-🧹 Data Cleaning Process
+## 🧹 Data Cleaning Process
 
-1. Standardized column names to consistent snake_case format
+1. **Standardized column names** to consistent snake_case format
 
-2. Removed 12 non-county entries (forests/parks) to focus on county-level analysis
+1. **Removed 12 non-county entries** (forests/parks) to focus on county-level analysis
 
-3. Handled missing values by removing counties with missing critical data and filling agricultural data gaps with 0
+1. **Handled missing values** by removing counties with missing critical data and filling agricultural data gaps with 0
 
-4. Converted data types to ensure all numeric columns are properly typed
+1. **Converted data types** to ensure all numeric columns are properly typed
 
-5. Validated data integrity by checking for negative values and recalculating population density
+1. **Validated data integrity** by checking for negative values and recalculating population density
 
-🔍 Methodology
+## 🔍 Methodology
 
-Primary Agricultural Sector Classification Logic
+### Primary Agricultural Sector Classification Logic
 
 1. Compare four main sub-sectors (Crop, Livestock, Aquaculture, Fishing) by household count
 
-2. Identify the dominant sector with the highest number of engaged households
+1. Identify the dominant sector with the highest number of engaged households
 
-3. Apply threshold: dominant sector must have ≥50% more households than second-largest
+1. Apply threshold: dominant sector must have ≥50% more households than second-largest
 
-4. If threshold not met, classify as 'Mixed Agriculture'
+1. If threshold not met, classify as 'Mixed Agriculture'
 
-5. Special case: If Crop and Livestock are within 20% of each other, classify as 'Crop-Livestock Mixed'
+1. Special case: If Crop and Livestock are within 20% of each other, classify as 'Crop-Livestock Mixed'
 
-Policy Metric Definitions
+### Policy Metric Definitions
 
-Crop Yield Potential Intensity
+**Crop Yield Potential Intensity**
 
-• Formula: Crop Production Households / Area (sq km)
+- **Formula**: Crop Production Households / Area (sq km)
 
-• Unit: Households per sq km
+- **Unit**: Households per sq km
 
-• Interpretation: Higher values indicate more intensive crop farming activity relative to land area
+- **Interpretation**: Higher values indicate more intensive crop farming activity relative to land area
 
-Agricultural Engagement Rate
+**Agricultural Engagement Rate**
 
-• Formula: (Farming Households / Total Households) × 100
+- **Formula**: (Farming Households / Total Households) × 100
 
-• Unit: Percentage (%)
+- **Unit**: Percentage (%)
 
-• Interpretation: Measures the extent to which a county's population depends on agriculture for livelihood
+- **Interpretation**: Measures the extent to which a county's population depends on agriculture for livelihood
 
-💡 Key Recommendations
+## 💡 Key Recommendations
 
-1. Targeted Agricultural Support Programs: Develop differentiated support based on Primary Agricultural Sector classification
+1. **Targeted Agricultural Support Programs**: Develop differentiated support based on Primary Agricultural Sector classification
 
-2. Sustainable Farming Practices: Promote sustainable intensification in high Crop Intensity counties
+1. **Sustainable Farming Practices**: Promote sustainable intensification in high Crop Intensity counties
 
-3. Economic Diversification: Invest in value chain development and non-farm employment in high Agricultural Engagement Rate counties
+1. **Economic Diversification**: Invest in value chain development and non-farm employment in high Agricultural Engagement Rate counties
 
-4. Further Research: Incorporate data on farm sizes, income levels, and actual crop yields for more precise targeting
+1. **Further Research**: Incorporate data on farm sizes, income levels, and actual crop yields for more precise targeting
 
-🚀 Getting Started
+## 🚀 Getting Started
 
-Prerequisites
+### Prerequisites
 
-Bash
-
-
+```bash
 pip install pandas numpy matplotlib seaborn scipy
+```
 
+### Running the Analysis
 
-Running the Analysis
-
-Bash
-
-
+```bash
 python3.11 analysis.py
+```
 
+### Viewing the Presentation
 
-Viewing the Presentation
+Open any of the HTML files in the `presentation/` directory in a web browser to view the slides.
 
-Open any of the HTML files in the presentation/ directory in a web browser to view the slides.
-
-📊 Visualizations
+## 📊 Visualizations
 
 The project includes five comprehensive visualizations:
 
-1. Top 10 Counties by Crop Production: Horizontal bar chart showing household engagement
+1. **Top 10 Counties by Crop Production**: Horizontal bar chart showing household engagement
 
-2. Agricultural Sub-Sectors Comparison: Bar and pie charts comparing the four major sub-sectors
+1. **Agricultural Sub-Sectors Comparison**: Bar and pie charts comparing the four major sub-sectors
 
-3. Agricultural Specialization Index: Top 15 counties by percentage of households engaged in farming
+1. **Agricultural Specialization Index**: Top 15 counties by percentage of households engaged in farming
 
-4. Primary Agricultural Sector Distribution: Bar chart showing county distribution across sector categories
+1. **Primary Agricultural Sector Distribution**: Bar chart showing county distribution across sector categories
 
-5. Agricultural Engagement vs Population Density: Scatter plot with trend line showing correlation
+1. **Agricultural Engagement vs Population Density**: Scatter plot with trend line showing correlation
 
-📝 Limitations
+## 📝 Limitations
 
-• Does not distinguish between subsistence and commercial farming
+- Does not distinguish between subsistence and commercial farming
 
-• No information on farm sizes or actual productivity levels
+- No information on farm sizes or actual productivity levels
 
-• Does not account for land quality, climate suitability, or actual crop yields
+- Does not account for land quality, climate suitability, or actual crop yields
 
-• Data represents a snapshot and does not capture seasonal variations
+- Data represents a snapshot and does not capture seasonal variations
 
-• Counties with smaller total areas may appear more intensive even with moderate farming activity
+- Counties with smaller total areas may appear more intensive even with moderate farming activity
 
-👥 Author
+## 👥 Author
 
 Reagan Ochola 
 
-📄 License
+## 📄 License
 
 This project is for educational and purposes.
 
-🙏 Acknowledgments
+## 🙏 Acknowledgments
 
-• Data source: County-level agricultural and demographic data (2019)
+- Data source: County-level agricultural and demographic data (2019)
 
-• Analysis framework: MEL principles for development program evaluation
+- Analysis framework: MEL principles for development program evaluation
 
-• Design aesthetic: Agricultural Data Cartography with earthy terracotta and forest green color palette
+- Design aesthetic: Agricultural Data Cartography with earthy terracotta and forest green color palette
 
+---
 
+**Project Status**: ✅ Complete
 
-
-Project Status: ✅ Complete
-
-Last Updated: November 2025
-
-
-
+**Last Updated**: November 2025
 
