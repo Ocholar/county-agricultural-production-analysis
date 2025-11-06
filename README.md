@@ -1,6 +1,6 @@
 # Agricultural Production Analysis for County-Level Planning
 
-A comprehensive MEL (Monitoring, Evaluation, and Learning) and Data Analytics project focused on transforming raw agricultural and demographic data into strategic insights for improving agricultural sustainability and food security at the county level.
+A comprehensive project focused on transforming raw agricultural and demographic data into strategic insights for improving agricultural sustainability and food security at the county level.
 
 ## 📋 Project Overview
 
