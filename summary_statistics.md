@@ -1,6 +1,6 @@
 # Agricultural Production Analysis for County-Level Planning
 
-A MEL and Data Analytics Portfolio Project
+A MEL and Data Analytics Project
 
 ---
 
